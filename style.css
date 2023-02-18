@@ -1,0 +1,69 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+ul{
+  list-style-type:none;
+  list-style-position: inside;
+  margin:85px 100px;
+  padding:0;
+  overflow:hidden;
+  height:100%;
+  font-family:Josefin slab;
+  font-size: 20px;
+
+  
+}
+
+li{
+  float:left;
+  margin-left: 150px;
+  margin-top: 35px;
+  text-align: center;
+}
+
+
+.container2 #image1{  
+ width: 100%;
+ height: 100%;
+ margin: auto 5px;
+
+
+  
+}
+
+.container #image2{
+ width: 300px;
+ height: 300px;
+ margin:-200px -100px;
+  
+}
+
+.container2 #image4{  
+  width: 300px;
+  height: 300px;
+
+ }
+ .container2 #image5{  
+  width: 300px;
+  height: 300px;
+
+ }
+
+ .container2 #image6{  
+  width: 300px;
+  height: 300px;
+
+ }
+
+ .container2 #image7{  
+  width: 300px;
+  height: 300px;
+
+ }
+
