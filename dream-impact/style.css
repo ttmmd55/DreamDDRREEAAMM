@@ -1,0 +1,51 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+h1{
+  position: fixed;
+  margin: auto 400px;
+  padding-top: 1%;
+  font-style: normal;
+}
+
+*{
+  position: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+#button{
+  position: fixed;
+  margin: 550px 1320px;
+  padding: 10px;  
+  height: 30px;
+  font-size: 15px;
+}
+
+textarea{
+  margin: 550px 800px;
+  width: 500px;
+  height: 30px;
+  border: 1px black solid;
+  outline: 1px;
+  resize: none;
+}
+
+li{
+  width: 500px;
+  height: auto;
+  padding: 5px;
+  /* background-color: white; */
+  /* border: 1px black solid; */
+  font-size: 15px;
+  margin: 100px 800px;
+}
+
+li a{
+  float: right;
+}
