@@ -33,27 +33,92 @@
 
 <style>
 
-.img_container{
+:root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+body{
+  height: 100%;
+}
+
+.img_container-grid{
   display: grid;
-  padding: 1rem;
-  grid-template-columns: 40% 40%;
-  gap: 1rem;
-  align-items: left;
-  margin-left: 10%;
-  /* max-width: 50%; */
-  /* margin: 0 auto; */
-  font: 500 100%/1.5 system-ui;
-}
-img.niki_img{
-  width: 100%;
-}
-.img_container p{
-  margin-left: 10%;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 20%;
 }
 
+@media(min-width: 640px){
+  .img_container-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
 
+@media(min-width: 640px){
+  .img_container-grid{
+  grid-template-columns: repeat(4, 1fr); 
+  }
+}
 
+.img_container{
+  list-style: none;
+  position: relative;
+}
 
+.img_container:before{
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+  width: 20%;
+}
+
+.niki_img{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(0.6) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.img_container:hover .niki_img{
+  transform: scale(0.7) translateZ(0);
+}
+
+.img_container-grid:hover > .img_container:not(:hover) .niki_img{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
 </style>
 
 
