@@ -110,11 +110,11 @@ li{
   font-weight: bold;
   font-size: 20vw;
   display: block;
-  position: fixed;
+  /* position: fixed;
   top: 20px;
   left: -5vw;
   bottom: 0;
-  right: 0;
+  right: 0; */
   display: grid;
   place-items: center;
   color:rgb(209,182,225);
@@ -122,11 +122,11 @@ li{
 
 .stripes:after {
   content: "";
-  position: fixed;
+  /* position: fixed;
   margin: auto;
   top: 0;
   left: 0;
-  right: 0;
+  right: 0; */
   bottom: 0;
   width: 10vw;
   height: 10vw;
