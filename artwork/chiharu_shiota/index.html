@@ -15,6 +15,14 @@
    </body>
 
 <style>
+html, body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(90deg, #8baaaa 0%, #ae8b9c 100%);
+  background-blend-mode: normal, lighten, soft-light;
+}
 
 :root{
   --background-dark: #2d3548;
@@ -29,9 +37,6 @@
 }
 
 *{
-  border: 0;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -102,6 +107,7 @@ body{
 .img_container-grid:hover > .img_container:not(:hover) .niki_img{
   filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
 }
+
 
 </style>
 
