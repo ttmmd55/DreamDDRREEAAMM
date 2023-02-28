@@ -8,9 +8,9 @@ btn.onclick = function(){
   if(txt.value == ""){
     alert("NoType")
   }else{
-    //create element li to youyanqu
+    //create element li to broad
     var li = document.createElement("li");
-
+    //Put the content of the text box into li, the content in the href in a tag means that nothing is executed
     li.innerHTML = txt.value + "<a href = 'javascript:;'>Delete</a>"
     txt.value = "";
 
@@ -23,5 +23,6 @@ btn.onclick = function(){
         ul.removeChild(this.parentNode);
       }
     }
+    alert("your message has been received by ***")
   }
 }
