@@ -1,6 +1,6 @@
 html, body {
   overflow-x: hidden;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   background-image: linear-gradient(90deg, #8baaaa 0%, #ae8b9c 100%);
@@ -31,6 +31,11 @@ li{
   text-align: center;
 }
 
+.container #image2{
+ width: 300px;
+ height: 300px;
+ margin:-200px -100px;  
+}
 
 .container2 #image1{  
  width: 60%;
@@ -38,34 +43,27 @@ li{
  margin: auto 5px;
 }
 
-.container #image2{
- width: 300px;
- height: 300px;
- margin:-200px -100px;
-  
-}
 
 .container2 #image4{  
   width: 200px;
   height: 200px;
-
  }
+
  .container2 #image5{  
   width: 200px;
   height: 200px;
-
  }
 
  .container2 #image6{  
   width: 200px;
   height: 200px;
-
  }
 
  .container2 #image7{  
   width: 200px;
   height: 200px;
  }
+
 
  div{
   width: 100%;
@@ -89,16 +87,10 @@ li{
     letter-spacing: 10px;
   }
   
-  
   100%{
     letter-spacing: 10px;
   }
   
-}
-
-* {
-  margin: 0;
-  padding: 0;
 }
 
 :root {
@@ -109,24 +101,50 @@ li{
 .stripes {
   font-weight: bold;
   font-size: 20vw;
-  display: block;
-  /* position: fixed;
-  top: 20px;
+   position: relative;
+  top: 50px;
   left: -5vw;
   bottom: 0;
-  right: 0; */
+  right: 0;
   display: grid;
   place-items: center;
   color:rgb(209,182,225);
 }
 
+.stripes:before {
+  content: "Dream Word";
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: repeating-linear-gradient(var(--color-1) 0px,
+          var(--color-1) 4px,
+          var(--color-2) 5px,
+          var(--color-2) 6px,
+          var(--color-1) 6px);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: flush 0.25s infinite linear;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+
+@keyframes flush {
+  to {
+      background-position: 0 5px;     
+  }
+}
+
 .stripes:after {
   content: "";
-  /* position: fixed;
-  margin: auto;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0; */
+  right: 0;
   bottom: 0;
   width: 10vw;
   height: 10vw;
@@ -153,3 +171,4 @@ li{
       border-left-color: transparent;
   }
 }
+
