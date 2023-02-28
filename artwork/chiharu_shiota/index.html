@@ -24,6 +24,34 @@ html, body {
   background-blend-mode: normal, lighten, soft-light;
 }
 
+div{
+  width: 100%;
+  text-align: center;
+  overflow-wrap: break-word;
+  animation: gradient 5.4s infinite ease-in-out;
+  letter-spacing: 10px;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+  
+@keyframes gradient{
+  0%{
+    letter-spacing: 10px;
+  }
+  40%{
+    letter-spacing: 30px;
+  }
+
+  80%{
+    letter-spacing: 10px;
+  }
+  
+  100%{
+    letter-spacing: 10px;
+  }
+}
+
 :root{
   --background-dark: #2d3548;
   --text-light: rgba(255,255,255,0.6);
