@@ -6,37 +6,41 @@
     <body>
 
 <div class="img_container">
-    <div class="picture">
-      <img class='niki_img' for="item-1" src="1.jpg" alt="Italian Trulli">
-    </div>
-
   <p >
     In the colorful light lines, he created a series of dreamlike neon scenes, using light and color to create a fantastic immersive experience.
   </p>
 
-    <div class="picture">
-      <img class='niki_img' for="item-2" src="2.jpg" alt="Italian Trulli">
-    </div>
+  <ul class="photos">
+    <li class="poloroid shake-slow shake-constant--hover shake-constant--active">
+      <div class="photo"><img src="1.jpg" style="develop" alt="shake to develop"/></div>
+      </li>
 
-    <div class="picture">
-      <img class='niki_img' for="item-3" src="3.jpg" alt="Italian Trulli">
-    </div>
+      <li class="poloroid shake-slow shake-constant--hover">
+      <div class="photo"><img src="2.jpg" style="develop" alt="shake to develop"/></div>
+      </li>
+  </ul>
 
-    <div class="picture">
-      <img class='niki_img' for="item-4" src="4.jpg" alt="Italian Trulli">
-    </div>
+  <ul class="photos">
+        <li class="poloroid shake-slow shake-constant--hover">
+      <div class="photo"><img src="3.jpg" style="develop" alt="shake to develop"/></div>
+        </li>
+      <li class="poloroid shake-slow shake-constant--hover">
+        <div class="photo"><img src="4.jpg" style="develop" alt="shake to develop"/></div>
+        </li>
+  </ul>
 
-    <div class="picture">
-      <img class='niki_img' for="item-5" src="5.jpg" alt="Italian Trulli">
-    </div>
+    <ul class="photos">
+      <li class="poloroid shake-slow shake-constant--hover">
+    <div class="photo"><img src="5.jpg" style="develop" alt="shake to develop"/></div>
+      </li>
+    <li class="poloroid shake-slow shake-constant--hover">
+      <div class="photo"><img src="6.jpg" style="develop" alt="shake to develop"/></div>
+      </li>
+  </ul>
 
-    <div class="picture">
-      <img class='niki_img' for="item-6" src="6.jpg" alt="Italian Trulli">
-    </div>
-
-
-</div>
+  </div>
 </body>
+</html>
 
 <style>
 
@@ -59,6 +63,100 @@ div{
 }
 
   
+ul{
+  position:relative;
+  margin:0 auto;
+  text-align:center;
+  display:block;
+  padding:0;
+}
+ul.poloroid {
+   list-style: none;
+}
+li.poloroid{
+  display:inline-block;
+  position:relative;
+  left:0%;
+  margin:2%;
+}
+li.poloroid:nth-child(odd){
+transform: rotate(random(2)+deg);
+}
+li.poloroid:nth-child(even){
+  transform: rotate(random(2) - 3 +deg);
+}
+.poloroid{
+  display:inline-block;
+  position:absolute;
+  width:3.5in;
+  height:4.25in;
+  background:white;
+  border-radius:2%;
+  
+}
+
+.poloroid h3{
+  position:relative;
+  display:block;
+  z-index:100; 
+  bottom:0;
+  top:3.5in;
+  width:80%;
+  margin:0 auto;
+  text-align:center;
+  font-size:24px;
+  transform: rotate($rand+deg);
+  opacity:random(100);
+
+}
+
+li.poloroid:hover > .photo img,
+li.poloroid:target > .photo img,
+li.poloroid:active > .photo img{
+ animation: develop-picture 3s ease-in forwards;
+}
+.photo{
+  position:absolute;
+  width:3in;
+  height:3.1in;
+  background:black;
+  z-index:10;
+  top:6%;
+  left:7%;
+
+  border:1px solid black;
+}
+.photo:hover{
+
+}
+.photo img{
+  border:1px solid black;
+  width:100%;
+  height:100%;
+  overflow:none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,.8)), black;
+  background-size:cover;
+  animation: develop-picture 3s ease-in paused;
+}
+ .photo img:hover,.photo img:active,.photo img:target{
+
+}
+@keyframes develop-picture {
+0%{
+   
+    opacity:0;
+    background:black;
+
+  }
+  50%{
+    opacity:.5;
+  }  
+100% {
+    opacity:1;
+  }
+
+}
+ 
 @keyframes gradient{
   0%{
     letter-spacing: 10px;
@@ -75,96 +173,6 @@ div{
     letter-spacing: 10px;
   }
 }
-
-:root{
-  --background-dark: #2d3548;
-  --text-light: rgba(255,255,255,0.6);
-  --text-lighter: rgba(255,255,255,0.9);
-  --spacing-s: 8px;
-  --spacing-m: 16px;
-  --spacing-l: 24px;
-  --spacing-xl: 32px;
-  --spacing-xxl: 64px;
-  --width-container: 1200px;
-}
-
-*{
-  border: 0;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html{
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-}
-
-body{
-  height: 100%;
-}
-
-.img_container-grid{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-column-gap: var(--spacing-l);
-  grid-row-gap: var(--spacing-l);
-  max-width: var(--width-container);
-  width: 20%;
-}
-
-
-
-@media(min-width: 640px){
-  .img_container-grid{
-    grid-template-columns: repeat(2, 1fr); 
-  }
-}
-
-@media(min-width: 640px){
-  .img_container-grid{
-  grid-template-columns: repeat(4, 1fr); 
-  }
-}
-
-.img_container{
-  list-style: none;
-  position: relative;
-}
-
-.img_container:before{
-  content: '';
-  display: block;
-  padding-bottom: 100%;
-  width: 20%;
-}
-
-.niki_img{
-  background-size: cover;
-  background-position: center;
-  border-radius: var(--spacing-l);
-  bottom: 0;
-  filter: brightness(0.75) saturate(1.2) contrast(0.85);
-  left: 0;
-  position: relative;
-  right: 0;
-  top: 0;
-  transform-origin: center;
-  transform: scale(0.6) translateZ(0);
-  transition: 
-    filter 200ms linear,
-    transform 200ms linear;
-}
-
-.img_container:hover .niki_img{
-  transform: scale(0.7) translateZ(0);
-}
-
-.img_container-grid:hover > .img_container:not(:hover) .niki_img{
-  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
-}
-
 </style>
 
 
