@@ -53,12 +53,13 @@ function draw() {
   background(cm.bgColor);
   starfield.display();
   atmosphere.display();
-
+  
+  //set speed
   var Millis = millis();
   var Second = millis()/3000;
-  //image(img,0,0,width,height);
   noStroke();
   
+  //draw circle
   var delta = 0.0625;
   var yu = Second%2
   var a = 50;
