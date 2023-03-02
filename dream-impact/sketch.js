@@ -83,9 +83,8 @@ function drawEllipse(x,y,a,time){
   }else{
     an=2*a;
   }
-  
-  fill(255, 50);
-  ellipse(x,y,an,an);         
+  fill(10, 10, 231,0.05); 
+  ellipse(x,y,an,an);   
 }
 
 function windowResized() {

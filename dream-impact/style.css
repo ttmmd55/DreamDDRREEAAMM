@@ -4,9 +4,14 @@ canvas {
 
 h1{
   position: fixed;
-  margin: auto 400px;
-  padding-top: 1%;
-  font-style: normal;
+  margin: 100px 200px;
+  padding-top: 5%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 70px;
+  font-style: italic;
+  letter-spacing: -3px;
+  animation: gradient 5.4s infinite ease-in-out;
+  color:rgb(45, 42, 48);
 }
 
 *{
@@ -17,17 +22,17 @@ h1{
 
 #button{
   position: fixed;
-  margin: 550px 1320px;
+  margin: 450px 750px;
   padding: 10px;  
-  height: 30px;
-  font-size: 15px;
+  height: 50px;
+  font-size: 16px;
 }
 
 textarea{
-  margin: 550px 800px;
+  margin: 450px 200px;
   width: 500px;
-  height: 30px;
-  border: 1px black solid;
+  height: 50px;
+  border: 0px rgb(116, 20, 116) solid;
   outline: 1px;
   resize: none;
 }
@@ -45,3 +50,23 @@ li{
 li a{
   float: right;
 }
+@keyframes gradient{
+  0%{
+    letter-spacing: 5px;
+  }
+  40%{
+    letter-spacing: 13px;
+  }
+  60%{
+    letter-spacing: 22px;
+  }
+
+  80%{
+    letter-spacing: 13x;
+  }
+  
+  100%{
+    letter-spacing: 5px;
+  }
+}
+  

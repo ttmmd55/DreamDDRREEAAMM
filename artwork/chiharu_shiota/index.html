@@ -6,7 +6,9 @@
       
 
       <div class="img_container">
-        <p >The concept of this installation is inspired by the Taoism parable of Zhangzi’s Butterfly Dream. It is a story about a man who dreamt he was a butterfly and when he woke up he couldn't distinguish between the dream and real life. He didn't know whether he was a butterfly dreaming of being a human or the other way around. He was confused because once he woke up he questioned his own sense of real life.      
+        <p >The concept of this installation is inspired by the Taoism parable of Zhangzi’s Butterfly Dream.       
+      </p>
+      <p >It is a story about a man who dreamt he was a butterfly and when he woke up he couldn't distinguish between the dream and real life.       
       </p>
         <ul class="photos">
           <li class="poloroid shake-slow shake-constant--hover shake-constant--active">
@@ -35,7 +37,7 @@ html, body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: linear-gradient(90deg, #8baaaa 0%, #ae8b9c 100%);
+  background-image: linear-gradient(90deg,  #b8efe2 0%, #fcc9ff 100%);
   background-blend-mode: normal, lighten, soft-light;
 }
 
@@ -43,8 +45,10 @@ div{
   width: 100%;
   text-align: center;
   overflow-wrap: break-word;
-  white-space: nowrap;
-  font-size: 20px;
+  white-space: normal;
+  font-size: 15px;
+  animation: gradient 5.4s infinite ease-in-out;
+  color: rgb(87, 32, 83);
 }
 
 ul{
@@ -101,7 +105,7 @@ li.poloroid:active > .photo img{
 .photo{
   position:absolute;
   width:3in;
-  height:3.1in;
+  height:3in;
   background:black;
   z-index:10;
   top:6%;
@@ -142,18 +146,21 @@ li.poloroid:active > .photo img{
  
 @keyframes gradient{
   0%{
-    letter-spacing: 10px;
+    letter-spacing: 2px;
   }
   40%{
-    letter-spacing: 30px;
+    letter-spacing: 4px;
+  }
+  60%{
+    letter-spacing: 5px;
   }
 
   80%{
-    letter-spacing: 10px;
+    letter-spacing: 4x;
   }
   
   100%{
-    letter-spacing: 10px;
+    letter-spacing: 2px;
   }
 }
 
